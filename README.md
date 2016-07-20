@@ -1,2 +1,2 @@
-# Appium-Startups
-Contains all details related to Appium
+# Gherkin files for HEB Native App 
+Contains details realted to Gherkins 
