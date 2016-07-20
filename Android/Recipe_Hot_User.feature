@@ -1,5 +1,15 @@
 Feature: H-E-B Cart page Recipe module feature
 
+General comments : 
+1) Include "page validation" keyword in the scenario for easy identification of the page elements validation
+2) For Hot user , instead of mentioning as register a new user mention the validation to be covered as " login as an User"
+
+Over all it looks clear and understandable .... :) 
+
+Few cases can be clubed and few need to be removed . I have provided comments in the appropriate scenarios 
+
+------------------------------
+@ReviewedOK
 @Priority2 @Recipe @TC01_RECI_HU
 Scenario: Recipe_Hot_User Verify user can search a valid recipe in recipe search bar
 	Given I am a hot user
@@ -17,6 +27,7 @@ Scenario: Recipe_Hot_User Verify user can search a valid recipe in recipe search
 	# 6. Content image should be displayed below search bar
 	# 7. "Quick Recipe Finder" button should be displayed at the bottom of the page.
 
+@ReviewedOK
 @Priority2 @Recipe @TC02_RECI_HU
 Scenario: Recipe_Hot_User Verify user can search a valid recipe in recipe search bar
 	Given I am a hot user
@@ -38,6 +49,8 @@ Scenario: Recipe_Hot_User Verify user can search a valid recipe in recipe search
 	# 5. Refine button in the right area should be displayed	
 	# 6. Displayed with search results as: <recipe image> and <recipe name> <ratings(if any)>
 
+
+@ReviewedOK
 @Priority2 @Recipe @TC03_RECI_HU
 Scenario: Recipe_Hot_User Verify user can search a valid recipe in recipe search bar
 	Given I am a hot user
@@ -55,7 +68,7 @@ Scenario: Recipe_Hot_User Verify user can search a valid recipe in recipe search
 	Then I should see recipe details page is displayed
 	# Include verification of recipe details
 	# 1. Recipe name should be displayed below navigation bar and with ratings(if any) in the right
-  # 2. Ingredients tab should be selected by default
+	# 2. Ingredients tab should be selected by default
 	# 3. Hamburger icon should appear in the left hand corner of navigation bar
 	# 4. Recipe Box icon should appear in the right hand corner of navigation bar	
 	# 5. Share icon should appear to the right of Recipe Box
@@ -70,6 +83,7 @@ Scenario: Recipe_Hot_User Verify user can search a valid recipe in recipe search
 	# c. In right of grey field, label "Serves" and <serves #> should be displayed
 	# 12. Ingredients, Instructions and Nutrition Info lables should be displayed below grey field
 
+@ReviewedOK
 @Priority1 @Recipe @TC04_RECI_HU
 Scenario: Recipe_Hot_User verify error message for invalid search in recipe search bar
 	Given I am a hot user
@@ -85,6 +99,7 @@ Scenario: Recipe_Hot_User verify error message for invalid search in recipe sear
 	# Include the error message in pop-up
 	# 1. The pop up should get displayed as "No results found for (invalid search term)"
 
+@ReviewedOK
 @Priority1 @Recipe @TC05_RECI_HU
 Scenario: Recipe_Hot_User verify user can select background image on recipe landing screen
 	Given I am a hot user
@@ -100,7 +115,8 @@ Scenario: Recipe_Hot_User verify user can select background image on recipe land
 	When I select background image on Landing page
 	Then I should see the results page
 	# Includes verification of title Recipe in the navigation bar
-	
+
+@ReviewedOK	
 @Priority2 @Recipe @TC06_RECI_HU
 Scenario: Recipe_Hot_User can navigate to Quick Recipe Finder
 	Given I am a hot user
@@ -121,7 +137,8 @@ Scenario: Recipe_Hot_User can navigate to Quick Recipe Finder
 	# a. Row 1 Label: "I want to make:"
 	# b. Row 2 Label: "with:"
 	# c. Row 3 Label: "in:"	
-	
+
+@Need to be changed	
 @Priority2 @Recipe @TC07_RECI_HU
 Scenario: Recipe_Hot_User can navigate to Quick Recipe Finder
 	Given I am a hot user
@@ -170,6 +187,9 @@ Scenario: Recipe_Hot_User can navigate to Quick Recipe Finder
 	Then I should see all the properties in Recipes List page
 	# Includes verification of title Recipe in the navigation bar
 	
+### COMMENT : Same Scenario name as in 7 & 6 
+
+@ReviewedOK
 @Priority2 @Recipe @TC08_RECI_HU
 Scenario: Recipe_Hot_User can navigate to Quick Recipe Finder and check for Refine button
 	Given I am a hot user
@@ -197,6 +217,7 @@ Scenario: Recipe_Hot_User can navigate to Quick Recipe Finder and check for Refi
 	# 6. Each selection option should have a Check Box, left of text
 	# 7. checkmark icon should appear at the right hand of navigation bar
 
+@Need to be changed
 @Priority2 @Recipe @TC09_RECI_HU
 Scenario: Recipe_Hot_User can navigate to Quick Recipe Finder and check for Refine button
 	Given I am a hot user
@@ -228,7 +249,9 @@ Scenario: Recipe_Hot_User can navigate to Quick Recipe Finder and check for Refi
 	Then I see previous screen with list of recipes
 	When I select device back button
 	Then I see Previously viewed page
-	
+## comment : Same scenario name as the previous one 
+
+@ReviewedOK	
 @Priority2 @Recipe @TC10_RECI_HU
 Scenario: Recipe_Hot_User can navigate to Advanced Search
 	Given I am a hot user
@@ -249,6 +272,7 @@ Scenario: Recipe_Hot_User can navigate to Advanced Search
 	# 4. Find button should be displayed (displaying a toast in Android, as this is a default behaviour with android)
 	# 5. Search criteria should have : <category header> and <search term> (row for each term within category)
 	
+@Need to be changed	
 @Priority2 @Recipe @TC11_RECI_HU
 Scenario: Recipe_Hot_User can navigate to Advanced Search
 	Given I am a hot user
@@ -271,7 +295,9 @@ Scenario: Recipe_Hot_User can navigate to Advanced Search
 	When I select Find button
 	Then I see search results page
 	# Includes verification of title Recipe in the navigation bar
-	
+###COMMENT: Same scenario name as the previous 
+
+@Need to be changed	
 @Priority1 @Recipe @TC12_RECI_HU
 Scenario: Recipe_Hot_User can Scan Product in recipe search
 	Given I am a hot user
@@ -288,7 +314,11 @@ Scenario: Recipe_Hot_User can Scan Product in recipe search
 	# Includes verification of error message "No results found for scanned item. Please try another search."
 	When I select OK button
 	Then I should see scan product screen
-	
+### COMMENT :
+#1) Practically this scenario cant be completely automated , but we can check for scan button , click it and return back to the previous page 
+# Please update the above cases accordingly	
+
+@ReviewedOK
 @Priority1 @Recipe @TC13_RECI_HU
 Scenario: Recipe_Hot_User can find the ingredients in the recipe detail page
 	Given I am a hot user
@@ -316,7 +346,8 @@ Scenario: Recipe_Hot_User can find the ingredients in the recipe detail page
 	# 7. Reviews followed by the number of reviews(if any) should be displayed for selected recipe
 	# 8. Each review should be displayed with <review title>,<rating>,<reviewer name>
 	# <Reviewed on Date>,<review body text> and "Read more" enabled text
-	
+
+@Need to be changed/@Need to remove	
 @Priority1 @Recipe @TC14_RECI_HU
 Scenario: Recipe_Hot_User can find the ingredients in the recipe detail page
 	Given I am a hot user
@@ -343,7 +374,12 @@ Scenario: Recipe_Hot_User can find the ingredients in the recipe detail page
 	# <Reviewed on Date>,<review body text> and "Read more" enabled text
 	When I select device back button
 	Then I should see previously viewed Search Results page
+
+### COMMENT : 
+1) No need of seperate scenario for Review as still now we cant add reviews in mobile App , the data need to flow from desktop browser .
+2) So we can validate the presence of review along with the above page element validation part of the previous scenario itself 
 	
+@ReviewedOK	
 @Priority3 @Recipe @TC15_RECI_HU
 Scenario: Recipe_Hot_User can navigate to the instructions tab in the recipe detail page
 	Given I am a hot user
@@ -370,8 +406,9 @@ Scenario: Recipe_Hot_User can navigate to the instructions tab in the recipe det
 	# 5. Each review should be displayed with <review title>,<rating>,<reviewer name>
 	#    <Reviewed on Date>,<review body text> and "Read more" enabled text
 	
+@ReviewedOK	
 @Priority3 @Recipe @TC16_RECI_HU
-Scenario: Recipe_Hot_User can navigate to the nutrition view tab
+Scenario: Recipe_Hot_User can navigate to the nutrition info view tab
 	Given I am a hot user
 	# Includes steps Open App,
 	# 1. open application
@@ -395,6 +432,7 @@ Scenario: Recipe_Hot_User can navigate to the nutrition view tab
 	# 4. Each review should be displayed with <review title>,<rating>,<reviewer name>
 	#    <Reviewed on Date>,<review body text> and "Read more" enabled text
 
+@ReviewedOK
 @Priority1 @Recipe @TC17_RECI_HU
 Scenario: Recipe_Hot_User No results error in advanced search
 	Given I am a hot user
@@ -412,6 +450,7 @@ Scenario: Recipe_Hot_User No results error in advanced search
 	# 1. If no results are available, Search Results page should display pop up with message 
 	# :"No results matched search terms. Please try again."
 	
+@ReviewedOK
 @Priority2 @Recipe @TC18_RECI_HU
 Scenario: Recipe_Hot_User can add recipe to the recipe box
 	Given I am a hot user
@@ -430,7 +469,7 @@ Scenario: Recipe_Hot_User can add recipe to the recipe box
 	When I select Add to Recipe Box
 	Then I should see scrolling selector appears with available folders
 	When I select any folder and select Add
-	Then I Should Recipe gets added to Recipe box
+	Then specific Recipe gets added to Recipe box
 	# Include verifying information in the Recipes page
 	# 1. Recipe gets added to Recipe box
 	# 2. The text should change to "Added to Recipe box" 
@@ -438,6 +477,7 @@ Scenario: Recipe_Hot_User can add recipe to the recipe box
 	When I click Added To Recipe Box
 	Then I should see the Recipe box with all the available folders
 	
+@ReviewedOK
 @Priority2 @Recipe @TC19_RECI_HU
 Scenario: Recipe_Hot_User can select the nutirional tab in the recipe detail page
 	Given I am a hot user
@@ -456,7 +496,8 @@ Scenario: Recipe_Hot_User can select the nutirional tab in the recipe detail pag
 	Then I should see the H-E-B Nutritional Tags with detailing each healthy icon
 	When I click device back button
 	Then I should see previously viewed Recipe Detail page
-		
+
+@ReviewedOK		
 @Priority2 @Recipe @TC20_RECI_HU
 Scenario: Recipe_Hot_User add one ingredient to shopping list
 	Given I am a hot user
@@ -489,7 +530,8 @@ Scenario: Recipe_Hot_User add one ingredient to shopping list
 	# Include verifying the deal(s) informaion
 	# 1. Verify deal(s) added are displayed correctly
 	# 2. Verify total quantities have been modified correctly in the header
-	
+
+@ReviewedOK	
 @Priority1 @Recipe @TC21_RECI_HU
 Scenario: Recipe_Hot_User add some ingredients to shopping list
 	Given I am a hot user
@@ -522,6 +564,7 @@ Scenario: Recipe_Hot_User add some ingredients to shopping list
 	# 1. Verify deal(s) added are displayed correctly
 	# 2. Verify total quantities have been modified correctly in the header
 
+@ReviewedOK
 @Priority1 @Recipe @TC22_RECI_HU
 Scenario: Recipe_Hot_User unselect OR add all ingredients to shopping list
 	Given I am a hot user
@@ -564,7 +607,8 @@ Scenario: Recipe_Hot_User unselect OR add all ingredients to shopping list
 	# Include verifying the deal(s) informaion
 	# 1. Verify deal(s) added are displayed correctly
 	# 2. Verify total quantities have been modified correctly in the header
-	
+
+@ReviewedOK	
 @Priority1 @Recipe @TC23_RECI_HU
 Scenario: Recipe_Hot_User can share recipe through internet
 	Given I am a hot user
@@ -582,6 +626,7 @@ Scenario: Recipe_Hot_User can share recipe through internet
 	# Include verifying thr share options information
 	# 1. The share options should be displayed in a scrolling selector with Facebook, Google+ and Email
 
+@ReviewedOK
 @Priority1 @Recipe @TC24_RECI_HU
 Scenario: Recipe_Hot_User delete recipe from recipe box
 	Given I am a hot user
@@ -604,7 +649,8 @@ Scenario: Recipe_Hot_User delete recipe from recipe box
 	# 1. Message should be appears as Deleted <The name of the recipe>
 	When I select device back button
 	Then I should view My Recipe Box
-	
+
+@ReviewedOK	
 @Priority2 @Recipe @TC25_RECI_HU
 Scenario: Recipe_Hot_User move recipe from one folder to another
 	Given I am a hot user
@@ -635,6 +681,7 @@ Scenario: Recipe_Hot_User move recipe from one folder to another
 	# 3. Verify if recipe count is decreased by one for the folder from where user moved
 	# 4. Recipe count should be decreased by 1
 
+@ReviewedOK
 @Priority2 @Recipe @TC26_RECI_HU
 Scenario: Recipe_Hot_User from recipe folder move recipe to shopping list 
 	Given I am a hot user
@@ -663,6 +710,7 @@ Scenario: Recipe_Hot_User from recipe folder move recipe to shopping list
 	# 1. Verify deal(s) added are displayed correctly
 	# 2. Verify total quantities have been modified correctly in the header
 
+@ReviewedOK
 @Priority2 @Recipe @TC27_RECI_HU
 Scenario: Recipe_Hot_User add folder to recipe box 
 	Given I am a hot user
@@ -689,6 +737,7 @@ Scenario: Recipe_Hot_User add folder to recipe box
 	# Include valid the My Recipe Box screen
 	# 1. My Recipe Box screen should displayed with newly created folder
 
+@ReviewedOK
 @Priority2 @Recipe @TC28_RECI_HU
 Scenario: Recipe_Hot_User rename folder in recipe box 
 	Given I am a hot user
@@ -708,6 +757,7 @@ Scenario: Recipe_Hot_User rename folder in recipe box
 	# Include verifying the My Recipe Box screen
 	# 1. My Recipe Box screen is displayed with folder name correctly updated to user entry
 
+@ReviewedOK
 @Priority2 @Recipe @TC29_RECI_HU
 Scenario: Recipe_Hot_User Select back button from recipe box 
 	Given I am a hot user
@@ -730,7 +780,8 @@ Scenario: Recipe_Hot_User Select back button from recipe box
 	# c. Add to List button, Move Recipe button and Delete Recipe button
 	When I select device back button
 	Then I should see previously viewed My Recipe Box page
-	
+
+@Need to remove	
 @Priority2 @Recipe @TC30_RECI_HU
 Scenario: Recipe_Hot_User view recipe detail page from recipe box
 	Given I am a hot user
@@ -748,6 +799,7 @@ Scenario: Recipe_Hot_User view recipe detail page from recipe box
 	When I select "Read More" link
 	Then I should see the entire review statement is displayed
 	
+@ReviewedOK	
 @Priority2 @Recipe @TC31_RECI_HU
 Scenario: Recipe_Hot_User delete folder from recipe box
 	Given I am a hot user
@@ -763,7 +815,8 @@ Scenario: Recipe_Hot_User delete folder from recipe box
 	# 2. Wait Toast message to disappear
 	# 3. Selected folder is deleted from "My Recipe Box"
 	# 4. Note: "All" folder should not be able to be deleted
-	
+
+@Need to remove	
 @Priority3 @Recipe @TC32_RECI_HU
 Scenario: Recipe_Hot_User select back button from recipe box
 Given I am a hot user
