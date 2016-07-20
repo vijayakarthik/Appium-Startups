@@ -1,5 +1,11 @@
 Feature: H-E-B Cart page feature
 
+General comments :
+1) Include "Page validation " keyword for the scenarios which has an page element validation
+2) Maintain Unique scenario name for each cases 
+
+
+@ReviewedOK
 @Priority2 @Recipe @TC01_RECI_CU
 Scenario: Recipe_Cold_User verify user can search a valid recipe in recipe search bar
 	Given I am a cold user
@@ -16,7 +22,8 @@ Scenario: Recipe_Cold_User verify user can search a valid recipe in recipe searc
 	# 5. Search bar should be displayed with default text as "Search or Scan Products" 
 	# 6. Content image should be displayed below search bar
 	# 7. "Quick Recipe Finder" button should be displayed at the bottom of the page.
-	
+
+@ReviewedOK	
 @Priority2 @Recipe @TC02_RECI_CU
 Scenario: Recipe_Cold_User verify user can search a valid recipe in recipe search bar
 	Given I am a cold user
@@ -38,6 +45,7 @@ Scenario: Recipe_Cold_User verify user can search a valid recipe in recipe searc
 	# 5. Refine button in the right area should be displayed	
 	# 6. Displayed with search results as: <recipe image> and <recipe name> <ratings(if any)>
 
+@Need to remove
 @Priority2 @Recipe @TC03_RECI_CU
 Scenario: Recipe_Cold_User verify user can navigate to Search text field
 	Given I am a cold user
@@ -53,7 +61,9 @@ Scenario: Recipe_Cold_User verify user can navigate to Search text field
 	# 1. Page should be displayed with Search text field and Cancel button
 	# 2. Scan Product button should be displayed
 	# 3. Keyboard at bottom of the screen should be displayed
-	
+### comment : combine with TC02
+
+@Need to remove	
 @Priority2 @Recipe @TC04_RECI_CU
 Scenario: Recipe_Cold_User verify user can navigate to Search text field
 	Given I am a cold user
@@ -84,6 +94,10 @@ Scenario: Recipe_Cold_User verify user can navigate to Search text field
 	# 10. Static Cold User Text
 	# 11. Settings
 
+### COMMENT : on clicking "X" icon we cant see hamburger icon in the left , we need to click device back button or click "<-" back arrow
+ # pls change accordingly
+
+@Need to be changed
 @Priority1 @Recipe @TC05_RECI_CU
 Scenario: Recipe_Cold_User verify user can select background image on recipe landing screen
 	Given I am a cold user
@@ -99,7 +113,9 @@ Scenario: Recipe_Cold_User verify user can select background image on recipe lan
 	When I select background image on Landing page
 	Then I validate all the properties in Recipes List page
 	# Includes verification of title Recipe in the navigation bar
-	
+##COMMENT: need to be more specific and a valid functionality 
+
+@ReviewedOK	
 @Priority2 @Recipe @TC06_RECI_CU
 Scenario: Recipe_Cold_User can navigate to Quick Recipe Finder
 	Given I am a cold user
@@ -123,6 +139,7 @@ Scenario: Recipe_Cold_User can navigate to Quick Recipe Finder
 	When I select device back button
 	Then I should see previous page
 	
+@ReviewedOK	
 @Priority2 @Recipe @TC07_RECI_CU
 Scenario: Recipe_Cold_User can navigate to Advanced search
 	Given I am a cold user
@@ -144,7 +161,8 @@ Scenario: Recipe_Cold_User can navigate to Advanced search
 	# 5. Search criteria should have : <category header> and <search term> (row for each term within category)	
 	When I select device back button
 	Then I should see previous page
-	
+
+@ReviewedOK	
 @Priority1 @Recipe @TC08_RECI_CU
 Scenario: 011 Recipe_Cold_User can Scan Product in recipe search
 	# Include steps Open App,
@@ -156,7 +174,8 @@ Scenario: 011 Recipe_Cold_User can Scan Product in recipe search
 	When I type Product catlog or direct product search 
 	Then I should see Search Results page	
 	# Includes verification of title Recipe in the navigation bar
-	
+
+@ReviewedOK	
 @Priority3 @Recipe @TC09_RECI_CU
 Scenario: Recipe_Cold_User can find the ingredients in the recipe detail page
 	Given I am a cold user
@@ -185,6 +204,7 @@ Scenario: Recipe_Cold_User can find the ingredients in the recipe detail page
 	# 8. Each review should be displayed with <review title>,<rating>,<reviewer name>
 	# <Reviewed on Date>,<review body text> and "Read more" enabled text	
 
+@ReviewedOK
 @Priority3 @Recipe @TC10_RECI_CU
 Scenario: Recipe_Cold_User can navigate to the instructions tab in the recipe detail page
 	Given I am a cold user
@@ -211,6 +231,7 @@ Scenario: Recipe_Cold_User can navigate to the instructions tab in the recipe de
 	# 5. Each review should be displayed with <review title>,<rating>,<reviewer name>
 	#    <Reviewed on Date>,<review body text> and "Read more" enabled text
 
+@ReviewedOK
 @Priority3 @Recipe @TC11_RECI_CU
 Scenario: Recipe_Cold_User can navigate to the nutrition view tab
 	Given I am a cold user
@@ -235,7 +256,8 @@ Scenario: Recipe_Cold_User can navigate to the nutrition view tab
 	# 3. Below nutrition info Reviews label followed by the number of reviews (if any) should be  displayed
 	# 4. Each review should be displayed with <review title>,<rating>,<reviewer name>
 	#    <Reviewed on Date>,<review body text> and "Read more" enabled text
-	
+
+@ReviewedOK	
 @Priority1 @Recipe @TC12_RECI_CU
 Scenario: Recipe_Cold_User No results error in advanced search
 	Given I am a cold user
@@ -259,7 +281,8 @@ Scenario: Recipe_Cold_User No results error in advanced search
 	# Include the pop up message should contain
 	# 1. If no results are available, Search Results page should display pop up with message 
 	# :"No results matched search terms. Please try again."
-	 
+
+@ReviewedOK	 
 @Priority2 @Recipe @TC13_RECI_CU
 Scenario: Recipe_Cold_User can log in from recipe detail page
 	Given I am a cold user
@@ -277,7 +300,8 @@ Scenario: Recipe_Cold_User can log in from recipe detail page
 	# 1. "Log in" button should be displayed below recipe image
 	When I click Log in button
 	Then I should see the Login/Registration page
-	
+
+@ReviewedOK	
 @Priority1 @Recipe @TC14_RECI_CU
 Scenario: Recipe_Cold_User from recipe box create an account 
 	Given I am a cold user
@@ -291,7 +315,7 @@ Scenario: Recipe_Cold_User from recipe box create an account
 	# Include Verification of title as My Recipe Box in the navigation bar
 	When I click Create an account
 	Then I should see the registration screen
-	When I click device back button twice
+	When I click device back button 
 	Then I should see pop-up cancel registration
 	When I click Yes in pop-up
 	Then I should see Previously viewed recipe box page
@@ -302,6 +326,7 @@ Scenario: Recipe_Cold_User from recipe box create an account
 	# Include validation of button
 	# 1. Login pop up dialog appears with cancel and Login button
 	
+@Need to remove	
 @Priority3 @Recipe @TC15_RECI_CU
 Scenario: Recipe_Cold_User can navigate to recipe box 
 	Given I am a cold user
@@ -315,7 +340,9 @@ Scenario: Recipe_Cold_User can navigate to recipe box
 	# Include Verification of title as My Recipe Box in the navigation bar
 	When I click device back button
 	Then I should see the previously viewed screen
-	
+### COMMENT : Already covered 
+
+@ReviewedOK	
 @Priority3 @Recipe @TC16_RECI_CU
 Scenario: Recipe_Cold_User can find the review comments below ingredients in the recipe detail page
 	Given I am a cold user
@@ -342,7 +369,9 @@ Scenario: Recipe_Cold_User can find the review comments below ingredients in the
 	# <Reviewed on Date>,<review body text> and "Read more" enabled text
 	When I click device back button
 	Then I should see search results page is displayed as previously viewed
-	 
+
+
+@ReviewedOK	 
 @Priority1 @Recipe @TC17_RECI_CU
 Scenario: Recipe_Cold_User from My Recipe box page 
 	Given I am a cold user
