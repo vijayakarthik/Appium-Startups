@@ -1,5 +1,14 @@
 Feature: Digital Coupons feature
 
+General comments : 
+
+1) Scenario names are repeated in few testcases . Please update it as unique text which is mandatory as like Test case ID’s 
+e.g @TC07_DC_HU and @TC08_DC_HU  
+2) Include the name as page validation in the scenario name where we are validating the page elements the app 
+
+
+
+  @ReviewedOK	
   @Priority3 @DigitalCoupons @TC01_DC_HU
   Scenario: DC_Hot_Verify Dialog Pop Up When Selecting Tabs
     Given I am a hot user but not signed for Digital Coupons
@@ -27,7 +36,8 @@ Feature: Digital Coupons feature
   	# 1. Header: "Sign Up or Log in"
   	# 2. Dialogue box reads "Please sign up or log in to access this feature."
   	# 3. An "Ok" button.
-  
+    
+    @ReviewedOK
     @Priority2 @DigitalCoupons @TC02_DC_HU
     Scenario: DC_Hot_Not Enrolled_All Coupons Apply Filters
     Given I am a hot user but not signed for Digital Coupons
@@ -57,6 +67,7 @@ Feature: Digital Coupons feature
     When I select "Popularity" sort option
     Then I see Coupons page is rearranged in the order of newly selected sort "Popularity"
 
+    @ReviewedOK
     @Priority2 @DigitalCoupons @TC03_DC_HU
     Scenario: DC_Hot_Not Enrolled_All Coupons Category Spinner
     Given I am a hot user but not signed for Digital Coupons
@@ -77,7 +88,8 @@ Feature: Digital Coupons feature
     Then I see Coupons screen
     # 1.Selected category name is displayed the action bar title
     # 2.Coupons displayed on screen are only those within selected category
-    
+   
+   @ReviewedOK 
     @Priority2 @DigitalCoupons @TC04_DC_HU
     Scenario: DC_Hot_Not Enrolled_All Coupons Category Search
     Given I am a hot user but not signed for Digital Coupons
@@ -105,6 +117,7 @@ Feature: Digital Coupons feature
     And I see Coupons page is displayed as previously viewed
     # Verification of coupons page with prior to searching
 
+    @ReviewedOK
     @Priority2 @DigitalCoupons @TC05_DC_HU
     Scenario: DC_Hot_Not Verified_Verification of Coupons details page
     Given I am a hot user but not signed for Digital Coupons
@@ -132,6 +145,7 @@ Feature: Digital Coupons feature
 	  #1.Includes Facebook,Twitter,Email
   	#2.Social apps must be installed on the device to be presented as an option.
   	
+    @ReviewedOK
     @Priority2 @DigitalCoupons @TC06_DC_HU
     Scenario: DC_Hot_Not Verified_Coupons Apply Filter On All Coupons
     Given I am a hot user but has not yet verified their mobile Phone# for Digital Coupons.
@@ -164,6 +178,7 @@ Feature: Digital Coupons feature
     When I select "Popularity" sort option
     Then I see Coupons page is rearranged in the order of newly selected sort "Popularity"
 
+    @ReviewedOK
     @Priority2 @DigitalCoupons @TC07_DC_HU
     Scenario: DC_Hot_Not Verified_Coupons Category Spinner
     Given I am a hot user  but has not yet verified their mobile Phone# for Digital Coupons
@@ -188,6 +203,7 @@ Feature: Digital Coupons feature
     # 1.Selected category name is displayed the action bar title
     # 2.Coupons displayed on screen are only those within selected category
     
+    @Need to be changed
     @Priority2 @DigitalCoupons @TC08_DC_HU
     Scenario: DC_Hot_Not Verified_Coupons Category Spinner
     Given I am a hot user  but has not yet verified their mobile Phone# for Digital Coupons
@@ -217,8 +233,10 @@ Feature: Digital Coupons feature
     And I see placeholder text as "Search Coupons"
     And I see Coupons page is displayed as previously viewed
     # Verification of coupons page with prior to searching
+    
+### comments : Same scenario name for both 07 & 08 
  
- 
+    @ReviewedOK
     @Priority2 @DigitalCoupons @TC09_DC_HU
     Scenario: DC_Hot_Not Verified_Coupons Resend Confirmation
     Given I am a hot user  but has not yet verified their mobile Phone# for Digital Coupons
@@ -245,6 +263,7 @@ Feature: Digital Coupons feature
     Then I see coupon detail screen with coupon detail
     #Includes a disabled red button with text "Confirmation resent"
     
+    @ReviewedOK
     @Priority2 @DigitalCoupons @TC10_DC_HU
     Scenario: DC_Hot_Not Verified_All Coupons Share on Coupon Details Page
     Given I am a hot user but has not yet verified their mobile Phone# for Digital Coupons.
@@ -267,6 +286,7 @@ Feature: Digital Coupons feature
     #1.Includes Facebook,Twitter,Email
     #2.Social apps must be installed on the device to be presented as an option.
 
+    @ReviewedOK
     @Priority2 @DigitalCoupons @TC11_DC_HU
     Scenario: DC_Hot_Not Verified_Coupons Apply Filter On All Coupons
     Given I am a hot user and enrolled in Digital Coupons
@@ -298,7 +318,7 @@ Feature: Digital Coupons feature
     Then I see Scrolling selector list appears with "Expiration Date" selected options
     When I select "Popularity" sort option
     Then I see Coupons page is rearranged in the order of newly selected sort "Popularity"
-
+@ReviewedOK
       @Priority2 @DigitalCoupons @TC12_DC_HU
     Scenario: DC_Hot_All Coupons Category Spinner
     Given I am a hot user and enrolled in Digital Coupons
@@ -409,7 +429,7 @@ Feature: Digital Coupons feature
 ######comments : For Hot User who has enrolled for coupons will not get the signup page again . Hence removed those steps 
 
 
-
+@Need to be changed 
     @Priority2 @DigitalCoupons @TC16_DC_HU
     Scenario: DC_Hot_Coupon Selected Savings Coupon Details Page
      Given I am a hot user and enrolled in Digital Coupons
@@ -435,3 +455,4 @@ Feature: Digital Coupons feature
     Then I see previously selected tab
     When I click Share button
     Then I see social apps
+######comments : For Hot User who has enrolled for coupons will not get the signup page again . Hence removed those steps 
