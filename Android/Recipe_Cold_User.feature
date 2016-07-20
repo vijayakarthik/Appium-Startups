@@ -5,7 +5,7 @@ General comments :
 2) Maintain Unique scenario name for each cases 
 
 
-@ReviewedOK
+@Need to be Changed 
 @Priority2 @Recipe @TC01_RECI_CU
 Scenario: Recipe_Cold_User verify user can search a valid recipe in recipe search bar
 	Given I am a cold user
@@ -22,7 +22,7 @@ Scenario: Recipe_Cold_User verify user can search a valid recipe in recipe searc
 	# 5. Search bar should be displayed with default text as "Search or Scan Products" 
 	# 6. Content image should be displayed below search bar
 	# 7. "Quick Recipe Finder" button should be displayed at the bottom of the page.
-
+### COMMENT : Change the Scenario name 
 @ReviewedOK	
 @Priority2 @Recipe @TC02_RECI_CU
 Scenario: Recipe_Cold_User verify user can search a valid recipe in recipe search bar
