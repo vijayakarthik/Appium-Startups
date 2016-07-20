@@ -57,7 +57,7 @@ Scenario: DC_CU_All Coupons_Verify Coupon Details Format
        Then I verify Coupons Details page
        When I select device back button
        Then I see All Coupons page
-## COMMENTS: 1) Change the page names as mentioned in the general comments
+## COMMENTS: 1) Change the page names as mentioned in the general comments 
               
               
 @ReviewedOK
