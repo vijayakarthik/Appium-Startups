@@ -1,6 +1,6 @@
 Feature: Digital Coupons feature
 
-General Comments:
+General Comments::
 1) Please use an generic name for the pages 
 like below 
        a) For CU when he clicks "coupons" from aisle navigate to " Coupons signup page "
