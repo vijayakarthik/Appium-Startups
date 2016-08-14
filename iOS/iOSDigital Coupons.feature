@@ -1,5 +1,8 @@
 Feature: Digital Coupons feature
-
+############3
+########
+############
+######################
     @Priority3 @DigitalCoupons @TC01_DC_HU
     Scenario: DC_Hot_Verify Dialog Pop Up When Selecting Tabs
     Given I am a hot user but not signed for Digital Coupons
